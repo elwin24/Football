@@ -1,12 +1,10 @@
-public class Team {
+public class Team implements Comparable<Team> {
     private String name;
     private int point;
 
     @Override
     public String toString() {
-        return  "name='" + name + '\'' +
-                ", point=" + point +
-                '}';
+        return name + "  ===============  point=" + point + '\n';
     }
 
     public Team(String name, int point) {
@@ -28,5 +26,11 @@ public class Team {
 
     public void setPoint(int point) {
         this.point = point;
+    }
+
+    @Override
+    public int compareTo(Team compare) {
+        int point = ((Team) compare).getPoint();
+        return point - this.point;
     }
 }
