@@ -28,7 +28,7 @@ public class Main {
 
         while (true) {
             Collections.sort(Main.teams);
-            System.out.println("Input command: ");
+            System.out.println("ENTER COMMAND . . . ");
             int com = scanner.nextInt();
             UserInterface.service(com);
         }
